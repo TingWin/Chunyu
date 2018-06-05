@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript"  src="./js/jquery-3.2.0.min.js"></script>
+	<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<script type="text/javascript" src="./js/jquery-3.2.0.min.js"></script>
+	<style type="text/css">
+		html,body{
+            font-size: 62.5%;
+        }
+        html,body,p,ul,li{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+        	background-color: #e9e9e9;
+        }
+        ul li{
+        	list-style: none;
+        }
+        .clearfix::after{
+        	display: block;
+        	clear: both;
+        	height: 0;
+        	content: "";
+        }
+        .top, .record, .doctor, .health{
+			width: 100%;
+			background: #fff;
+        }
+        .top-bar, .record-bar{
+        	padding: 1.5rem 1.5rem 2.2rem 1.5rem;
+        }
+        .record-bar0{
+        	padding: 0 1.5rem 0 1.5rem;
+        }
+		.tip, .reletive-record, .doctor-recommend, .healthy{
+			font-size: 1.6rem;
+			color: #666;
+			line-height: 1.6rem;
+		}
+		.doctor-recommend{
+			margin-bottom: 0.6rem;
+		}
+		.tip, .reletive-record{
+			margin-bottom: 1.8rem;
+		}
+		.content{
+			margin-bottom: 1.3rem;
+		}
+		.content>span{
+			font-size: 1.3rem;
+			color: #999;
+			line-height: 2.0rem;
+			text-align: justify;
+		}
+		.tip-bottom>span{
+			display: inline-block;
+			font-size: 1.4rem;
+			line-height: 1.4rem;
+			color: #666;
+		}
+		.notice{
+			padding: 0 1.45rem;
+		}
+		.record, .doctor, .health{
+			margin-top: 0.3rem;
+		}
+		.record-bar-one, .record-bottom{
+			overflow: hidden;
+		}
+		.reletive-record, .question{
+			float: left;
+		}
+		.more{
+			float: right;
+		}
+		.more>span, .most>span{
+			display: inline-block;
+			font-size: 1.3rem;
+			line-height: 1.3rem;
+			color: #999;
+		}
+		.triangle>img{
+			display: inline-block;
+			width: 0.7rem;
+			height: 1.2rem;
+		}
+		.more0, .most0{
+			margin-right: 0.5rem;
+		}
+		.record-bottom{
+			padding: 0 0 1.2rem 2.3rem;
+			position: relative;
+			border-bottom: 1px solid #e9e9e9;
+		}
+		.record-bottom0{
+			border-bottom: none;
+		}
+		.question>img{
+			position: absolute;
+			left: 0;
+			top: 0.5rem;
+			margin-right: 0.7rem;
+			width: 1.6rem;
+			height: 1.6rem;
+		}
+		.illness>span{
+			font-size: 1.3rem;
+			color: #323232;
+			line-height: 2.0rem;
+			text-align: justify;
+		}
+		.recommend{
+			padding: 1.5rem 1.5rem 0 1.5rem;
+			overflow: hidden;
+		}
+		.doctor-recommend{
+			float: left;
+		}
+		.most{
+			float: right;
+		}
+		.name{
+			padding: 2.0rem 0.9rem 1.1rem 8.5rem; 
+			position: relative;
+			overflow: hidden;
+		}
+		.name>div{
+			float: left;
+		}
+		.picture{
+			overflow: hidden;
+		}
+		.picture>img{
+			display: block;
+			width: 6.0rem;
+			height: 6.0rem;
+			position: absolute;
+			left: 1.5rem;
+			margin-right: 1.0rem;
+			border-radius: 100%;
+		}
+		.name0{
+			font-size: 1.6rem;
+			color: #323232;
+		}
+		.job{
+			font-size: 1.3rem;
+			color: #666;
+		}
+		.interest, .people{
+			font-size: 1.3rem;
+			color: #999;
+		}
+		.nameone{
+			margin-bottom: 0.3rem;
+		}
+		.adress{
+			margin-bottom: 0.4rem;
+		}
+		.interest{
+			margin-bottom: 1.7rem;
+		}
+		.money0{
+			font-size: 1.3rem;
+			color: #ff6134;
+			padding-right: 0.7rem;
+		}
+		.health-bar{
+			padding: 1.4rem 0 0 1.5rem;
+		}
+		.healthy{
+			margin-bottom: 1.1rem;
+		}
+		.acne, .acne0{
+			padding: 1.5rem 0;
+			font-size: 1.5rem;
+			line-height: 1.6rem;
+			color: #000;
+			border-bottom: 1px solid #e9e9e9;
+		}
+		.acne0{
+			border-top: 1px solid #e9e9e9;
+		}
+	</style>
+</head>
+<body>
+	<div class="top">
+		<div class="top-bar">
+			<p class="tip">阑尾炎手术</p>
+		    
+		    <p class="tip-bottom">
+		    	<span>|</span>
+		    	<span class="notice">就诊科室</span>
+		    	<span>|</span>
+		    	<span class="notice">术前注意事项</span>
+		    	<span>|</span>
+		    	<span class="notice">术后护理</span>
+		    	<span>|</span>
+		    </p>
+		</div>
+	</div>
+	<div class="record">
+		<div class="record-bar">
+			<div class="record-bar-one">
+				<p class="reletive-record">相关咨询记录</p>
+			    <p class="more"><span class="more0">更多</span><span class="triangle"><img src="./image/Path 1 Copy@2x.png" alt=""></span></p>
+			</div>
+			<div class="record-bottom">
+				<p class="question"><img src="./image/Group 2@2x.png" alt=""></p>
+				<p class="illness"><span>医生您好，痤疮或者粉刺、痤疮破裂、肤色不好、变色或者色素沉淀，该怎么办？应该吃点什么合适，平时应该注意什么饮食习惯或者生活上应该怎么样？</span></p>
+			</div>
+		</div>
+		<div class="record-bar0">
+			<div class="record-bottom record-bottom0">
+				<p class="question"><img src="./image/Group 2@2x.png" alt=""></p>
+				<p class="illness"><span>医生您好，痤疮或者粉刺、痤疮破裂、肤色不好、变色或者色素沉淀，该怎么办？应该吃点什么合适，平时应该注意什么饮食习惯或者生活上应该怎么样？</span></p>
+			</div>
+		</div>
+	</div>
+	<div class="doctor">
+		<div class="recommend">
+			<p class="doctor-recommend">医生推荐</p>
+			<p class="most"><span class="most0">更多</span><span class="triangle"><img src="./image/Path 1 Copy@2x.png" alt=""></span></p>
+		</div>
+		<div class="name">
+			<div class="picture"><img src="./image/QQ图片20171022154406.jpg" alt=""></div>
+			<div class="intruduce">
+				<p class="nameone"><span class="name0">王坚韧</span><span class="job">皮肤科 副主任医师</span></p>
+				<p class="adress job">中国人民解放军总医院（301医院 )</p>
+				<p class="interest">擅长：眼科常见病，脸裂斑，视网膜静脉阻塞白内障，眼底出血，斜视，视网膜脱落，眼红病等…</p>
+				<p class="money"><span class="money0">$5起</span><span class="people">8792人购买</span></p>
+			</div>
+		</div>
+		<div class="name">
+			<div class="picture"><img src="./image/QQ图片20171022154406.jpg" alt=""></div>
+			<div class="intruduce">
+				<p class="nameone"><span class="name0">王坚韧</span><span class="job">皮肤科 副主任医师</span></p>
+				<p class="adress job">中国人民解放军总医院（301医院 )</p>
+				<p class="interest">擅长：眼科常见病，脸裂斑，视网膜静脉阻塞白内障，眼底出血，斜视，视网膜脱落，眼红病等…</p>
+				<p class="money"><span class="money0">$5起</span><span class="people">8792人购买</span></p>
+			</div>
+		</div>
+	</div>
+	<div class="health">
+		<div class="health-bar">
+			<p class="healthy">健康百科</p>
+			<p class="acne">痤疮如何治疗？</p>
+			<p class="acne0">痤疮该怎么办？</p>
+			<p class="acne0">怎样给痤疮分类？</p>
+			<p class="acne0">重要怎么一直痤疮？</p>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			$.ajax({
+			url: "http://test.zhituteam.com/fetch.php",
+			type: "get",
+			dataType: "json",
+			data: {
+				is_json: 1,
+				query: "发烧",
+			},
+			success: function(res){
+				for(var i=0;i<res.search_results.length;i++){
+			   if(res.search_results[i].type == 'DISEASE_DESC') {
+					var str = "<p class='content'><span>"+res.search_results[i].desc+"</span></p>";
+ 					$(".top-bar").html(str);
+			   };
+		    });
+		});
+	</script>
+</body>
+</html>

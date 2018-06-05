@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <script src="./js/jquery-3.2.0.min.js"></script>
+	<title>Document</title>
+	<style>
+		html,body {
+            font-size: 62.5%;
+            background-color: #eee;
+        }
+        html,body,p,span,a,ul,li{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+        	text-decoration: none;
+        }
+        ul{
+        	list-style: none;
+        }
+        .clearfix::after{
+			clear: both;
+			height: 0;
+			content: "";
+			display: block;
+        }
+		.top{
+
+
+			margin-top:1.5rem;
+			background: #fff;
+			
+		}
+		.middle, .tip, .bottom, .footer{
+			margin-top:1rem;
+			background: #fff;
+		}
+		.top-title, .middle-title, .tip-title, .bottom-title, .footer-title{
+			font-family: PingFangSC-Medium;
+			font-size: 1.6rem;
+			color: #666666;
+			line-height: 1.6rem;
+			padding: 1.5rem 0 0 1.5rem;
+		}
+		.top p{
+			font-family: PingFangSC-Light;
+			font-size: 1.3rem;
+			color: #999999;
+			
+			line-height: 2rem;
+			padding: 1.8rem 1.5rem 1.3rem 1.5rem;
+		}
+		.top-bottom{
+			padding-bottom: 1.5rem;
+			text-align: center;
+		}
+		.top-bottom a{
+			font-family: PingFangSC-Light;
+			font-size: 1.4rem;
+			color: #666666;
+			line-height: 1.4rem;
+			display: inline-block;
+			margin: 0 1.7rem;
+		}
+		.middle-title a, .tip-title a, .footer-title a{
+			display: inline-block;
+			font-family: PingFangSC-Light;
+			font-size: 1.3rem;
+			color: #999999;
+			line-height: 1.3rem;
+			float: right;
+			padding-right: 1.5rem;
+		}
+		.middle-title img, .tip-title img, .footer-title img{
+			width: 0.7rem;
+			height: 1.2rem;
+			padding-left: 0.5rem;
+		}
+		.middle-content{
+			border-bottom: 1px solid #F4F4F4;
+		}
+		.middle-content img{
+			height: 1.6rem;
+			width: 1.6rem;
+			padding: 2.2rem 0 0 1.5rem;
+			float: left;
+		}
+		.middle-content-s img{
+			height: 1.6rem;
+			width: 1.6rem;
+			padding: 2rem 0 0 1.5rem;
+			float: left;
+		}
+		.middle-content p{
+			
+			font-family: PingFangSC-Light;
+			font-size: 1.3rem;
+			color: #323232;
+			letter-spacing: -0.03rem;
+			line-height: 2rem;
+			padding: 1.8rem 0.7rem 1.2rem 4.1rem;
+
+		}
+		.middle-content-s p{
+			
+			font-family: PingFangSC-Light;
+			font-size: 1.3rem;
+			color: #323232;
+			letter-spacing: -0.03rem;
+			line-height: 2rem;
+			padding: 1.5rem 0.7rem 1.3rem 4.1rem;
+
+		}
+		.middle-content span, .middle-content-s span{
+			color: #ff0000;
+		}
+		.tip-content{
+			position: relative;
+			padding: 1.7rem 1rem 1.1rem 8rem;
+		}
+		.tip-content{
+			border-bottom: 1px solid #F4F4F4;
+		}
+		.tip-content img{
+			position: absolute;
+			left: 1.5rem;	
+		}
+
+		.name{
+			
+			
+			font-family: PingFangSC-Medium;
+			font-size: 1.6rem;
+			color: #323232;
+			letter-spacing: -0.039rem;
+			
+		}
+		.name span{
+			font-family: PingFangSC-Light;
+			font-size: 1.3rem;
+			color: #666666;
+			letter-spacing: -0.031rem;
+			padding-left:1rem;
+		}
+		.address{
+			font-family: PingFangSC-Light;
+			font-size: 1.3rem;
+			color: #666666;
+			letter-spacing: -0.031rem;
+			padding-top:0.3rem;
+		}
+		.ill{
+			font-family: PingFangSC-Light;
+			font-size: 1.3rem;
+			color: #999999;
+			letter-spacing: -0.041rem;
+			padding:0.4rem 0 0.8rem 0;
+			
+		}
+		.info{
+			border-bottom: 1px solid #F4F4F4;
+		}
+		.sell p{
+			font-family: PingFangSC-Light;
+			font-size: 1.3rem;
+			color: #666666;
+			letter-spacing: -0.031rem;
+		}
+		.sell{
+			padding:0.8rem 0.7rem 0 0;
+		}
+		.sell span{
+			font-family: PingFangSC-Light;
+			font-size: 1.3rem;
+			color: #FF6134;
+			letter-spacing: -0.031rem;
+			padding-right: 0.7rem;
+			
+		}
+		.sell .special{
+			
+			border: 1px solid #FF6134;
+            border-radius: 1.5rem;
+            float: right;
+            text-align: center;
+            width: 5.4rem;
+			height: 1.5rem;
+
+		}
+		.clearfix{
+			padding: 0.8rem 0 0 1.5rem;
+		}
+		.bottom ul li{
+			height:3rem; 
+			border-bottom: 1px solid #F4F4F4;
+			padding-top: 1.3rem;
+		}
+		.bottom a{
+			font-family: PingFangSC-Light;
+			font-size: 1.5rem;
+			color: #000000;
+			line-height: 1.6rem;
+		}
+		.bottom img{
+		    width: 0.7rem;
+    		height: 1.2rem;
+    		float: right;
+    		padding-right: 1.5rem;
+		}
+		.footer-content{
+			position: relative;
+			padding: 2.6rem 1rem 0.6rem 8rem;
+			border-bottom: 1px solid #F4F4F4;
+		}
+		.footer-content img{
+			position: absolute;
+			left:1.5rem;
+
+		}
+		.footer-content p{
+			font-family: PingFangSC-Regular;
+			font-size: 1.5rem;
+			color: #323232;
+			letter-spacing: -0.036rem;
+			line-height: 1.6rem;
+			padding-left: 2rem;
+		}
+		.footer-content .footer-tip{
+			padding: 3.2rem 0 2rem 2rem;
+			font-family: PingFangSC-Light;
+			font-size: 1.3rem;
+			color: #999999;
+			letter-spacing: -0.031rem;
+			line-height: 1.3rem;
+
+		}
+		.search-box {
+			width: 100%;
+			height: 2rem;
+		}
+
+	</style>
+</head>
+<body>
+	<input type="text" class="search-box">
+	<button class="search-btn">搜索</button>
+	<div class="top">
+
+	</div>
+	<div class="middle">
+		<div class="middle-title">相关咨询记录
+			<a href="#">更多<img src="./images/path.png" alt=""></a>
+		</div>
+		<div class="ask-content">
+		</div>
+	</div>
+	<div class="tip">
+		<div class="tip-title">医生推荐
+			<a href="#">更多<img src="./images/path.png" alt=""></a>
+		</div>
+		<div class="tip-news"></div>
+	</div>
+	<div class="bottom">
+		<div class="bottom-title">健康百科</div>
+		<div class="baike"></div>
+	</div>
+	<div class="footer">
+		<div class="footer-title">相关科普资讯
+		<a href="#">更多<img src="./images/path.png" alt=""></a></div>
+		<div class="foot-news"></div>		
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			$(".search-btn").click(function(){
+				var searchQuery = $(".search-box").val();
+
+				$.ajax({
+				url: "http://test.zhituteam.com/fetch.php/",
+				type: "get",
+				dataType: "json",
+				data: {
+					query: searchQuery,
+				},
+				success:function(res){					
+					for(var i=0;i<res.search_results.length;i++){
+					   if(res.search_results[i].type == 'DISEASE_DESC') {
+							var str = "<div class='top-title'>"+res.search_results[i].query_str+"</div><p>"+res.search_results[i].desc+"</p><div class='top-bottom'><a href='#'>就诊科室</a><a href='#'>术前注意事项</a><a href='#'>术后护理</a></div>";
+		 					$(".top").html(str);
+					   };
+					   if(res.search_results[i].type == 'SIMILAR_PRO'){
+					   		var askStr = "";
+					   		for(var j=0;j<res.search_results[i].result.length;j++){
+					   			askStr += "<div class='middle-content'><img src='./images/ask.png' alt=''><p>"+res.search_results[i].result[j].ask+"</p></div>";	
+					   		}
+					   		$(".ask-content").html(askStr);
+					   };
+					   if(res.search_results[i].type == 'DOCTOR_RELATED'){
+					   		var doctorStr = "";
+							for(var k=0;k<res.search_results[i].result.length;k++){
+								doctorStr += "<div class='tip-content'><img src='./images/doctor.png' alt=''><div class='info'><p class='name'>"+res.search_results[i].result[k].name+"<span>"+res.search_results[i].result[k].clinic+"</span></p><p class='address'>"+res.search_results[i].result[k].hospital+"</p><p class='ill'>"+res.search_results[i].result[k].good_at+"</p></div><div class='sell'><p><span>"+res.search_results[i].result[k].price_text+"</span>8792人购买</p></div></div>";
+							}
+							$(".tip-news").html(doctorStr);
+						};
+						if(res.search_results[i].type == "PEDIA_INFO"){
+							var bkStr = "";
+							for(var a=0;a<res.search_results[i].result.length;a++){
+								bkStr += "<ul class='clearfix'><li><a href='#'>"+res.search_results[i].result[a].title+"</a><img src='./images/path.png' alt=''></li></ul>";
+								$(".baike").html(bkStr);
+							}
+						};
+						if(res.search_results[i].type == "NEWS"){
+							var footStr = "";
+							for(var b=0;b<res.search_results[i].result.length;b++){
+								footStr += "<div class='footer-content'><img src='./images/kid.png' alt=''><p>"+res.search_results[i].result[b].title+"</p><p class='footer-tip'>"+res.search_results[i].result[b].channel_name+"</p></div>"
+							}
+							$(".foot-news").html(footStr);
+						}
+					}
+				},
+				error:function(res){
+					// alert(res);
+				},
+			});
+			})	
+		});
+         
+	</script>
+</body>
+</html>

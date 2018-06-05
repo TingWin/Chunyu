@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<script type="text/javascript"  src="./js/jquery-3.2.0.min.js"></script>
+	<title>Document</title>
+	<style type="text/css">
+		html,body {
+			font-size: 62.5%;
+			font-family:PingFangSC-Regular;
+		}
+		html,body,h1,span,p {
+			padding: 0;
+			margin: 0;
+		}
+		a {
+			text-decoration: none;
+		}
+		.clearfix::after {
+			content: "";
+			height: 0;
+			display: block;
+			clear: both;
+		}
+		.top {
+			background:#1b91e0;
+			width: 37.5rem;
+			height: 4.4rem;
+		}
+		.top h1{			
+			font-size:1.6rem;
+			color:#ffffff;
+			letter-spacing:0;
+			line-height: 4.4rem;
+			text-align:center;
+		}
+		.content-header{
+			width: 37.5rem;
+			height: 4.4rem;
+			background-color: #fff;
+		}
+		.content-header a {
+			font-size: 1.4rem;
+			color:#666666;
+			line-height: 4.4rem;
+			letter-spacing:0.072rem;
+			margin-left: 1.6rem;
+			text-align:left;
+		}
+		.content-header .change  {
+			color: blue;
+			font-size: 1.6rem;
+		}
+		.content-header button {
+			font-size:1.4rem;
+			color:#666666;
+			letter-spacing:0.072rem;
+			line-height:4.4rem;
+			float: right;
+			border: 0;
+			margin-right: 4rem;
+		}
+		.content-body {
+			margin-top: 1rem;
+		}
+		.news {
+			background:#ffffff;
+			width:37.5rem;
+			height:10.3rem;
+			margin: 1rem 0;
+			position: relative;
+			border-top: 1px solid #888;
+		}
+		.news img {
+			position: absolute;
+			width:4.3rem;
+			height:4.3rem;
+			margin-left: 1.6rem;
+			border-radius:100%;
+		}
+		.introduce {
+			margin-top: 2rem;
+			margin-left: 7rem;
+		}
+		.introduce .name {
+			font-size:1.6rem;
+			color:#323232;
+			letter-spacing:-0.04rem;
+			line-height:1.6rem;
+			text-align:justify;
+		}
+		.introduce .ZC {
+			font-size:1.6rem;
+			color:#666666;
+			letter-spacing:-0.04rem;
+			line-height:1.6rem;
+			margin-left: 1rem;
+		}
+		.introduce .sex {
+			font-size:1.3rem;
+			color:#666666;
+			letter-spacing:0;
+			text-align:justify;
+		}
+		.introduce .city {
+			font-size: 1.3rem;
+			color: #bcbcbc;
+			line-height: 3rem;
+			text-align: left;
+		}
+		.icon {
+			position: relative;
+			float: right;
+			top: -5rem;
+		}
+		.icon span {
+			display: block;
+			width: 2rem;
+			height: 2rem;
+		}
+        .buttom button {
+        	float: left;
+        	background:#1c91e0;
+			width:26.2rem;
+			height:4.8rem;
+			color: #fff;
+        }
+        .buttom .all {
+        	float: left;
+			border:1px solid #888;
+			width:10.5rem;
+			height:4.8rem;
+			color: black;
+			font-size: 1.6rem;
+			line-height: 4.8rem;
+			text-align: center;
+        }
+        .buttom .all span {
+        	float: left;
+        	margin-left: 1rem;
+        	margin-top: 2rem;
+        	width: 2rem;
+			height: 2rem;
+        	display: block;
+        }
+         .all-noselected, .no-selected {
+            background-image: url("./images/no-selected.png");
+            background-size: 100% 100%;
+        }
+        .all-selected, .selected {
+            background-image: url("./images/selected.png");
+            background-size: 100% 100%;
+        }
+	</style>
+</head>
+<body>
+	<div class="top">
+		<h1>批量通知患者</h1>
+	</div>
+	<div class="content-header clearfix">
+		<a href="#">已选<span class="change">0</span>人</a>
+		<button>关闭管理</button>
+	</div>
+	<div class="content-body">
+		<div class="news clearfix">
+			<img src="./images/user_png.png">
+			<div class="introduce">
+				<p>
+					<a href="#" class="name">王小庄</a>
+					<a href="#" class="ZC">感冒</a>
+				</p>
+				<p class="sex">男 27岁</p>
+				<p class="city">已支付  黑龙江/哈尔滨</p>
+			</div>
+			<div class="icon">
+				<span class="select-btn no-selected"></span>
+			</div>
+		</div>
+		<div class="news clearfix">
+			<img src="./images/user_png.png">
+			<div class="introduce">
+				<p>
+					<a href="#" class="name">王小庄</a>
+					<a href="#" class="ZC">感冒</a>
+				</p>
+				<p class="sex">男 27岁</p>
+				<p class="city">已支付  黑龙江/哈尔滨</p>
+			</div>
+			<div class="icon">
+				<span class="select-btn no-selected"></span>
+			</div>
+		</div>
+		<div class="news clearfix">
+			<img src="./images/user_png.png">
+			<div class="introduce">
+				<p>
+					<a href="#" class="name">王小庄</a>
+					<a href="#" class="ZC">感冒</a>
+				</p>
+				<p class="sex">男 27岁</p>
+				<p class="city">已支付  黑龙江/哈尔滨</p>
+			</div>
+			<div class="icon">
+				<span class="select-btn no-selected"></span>
+			</div>
+		</div>
+	</div>
+	<div class="buttom clearfix">
+		<button>下一步</button>
+		<div class="all">全选<span class="all-btn all-noselected"></div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			//选中全部
+            $(".all").click(function(){
+                if($(".all-btn").hasClass("all-noselected")){
+                    $(".all-btn").addClass("all-selected").removeClass("all-noselected");
+                    $(".icon").addClass("selected").removeClass("no-selected");
+                    var selectedNum = $(".selected").length;
+			        var selectedBtnNum = $(".select-btn").length;
+			        $(".change").text(selectedNum);
+                }else {
+                    $(".all-btn").addClass("all-noselected").removeClass("all-selected");
+                    $(".icon").addClass("no-selected").removeClass("selected");
+                    $(".change").text(0);
+                }
+            });	
+		//单个选中
+		    $(".icon").click(function(){
+		        $(this).toggleClass("selected");
+		        var selectedNum = $(".icon.selected").length;
+		        var selectedBtnNum = $(".icon").length;
+		        $(".change").text(selectedNum);
+		        if(selectedNum == selectedBtnNum) {
+		            $(".all-btn").addClass("all-selected").removeClass("all-noselected");
+		        }else {
+		            $(".all-btn").addClass("all-noselected").removeClass("all-selected");
+		        }
+		    })
+		})
+	</script>
+</body>
+</html>
